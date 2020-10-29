@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "App.svelte",
+    "Card.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import Card from \"./Card.svelte\";\n</script>\n\n<style>\nheader {\n  font-size: 400%;\n  text-align: center;\n}\n</style>\n\n<header>Font Swiper!</header>\n<Card></Card>\n",
+    "<script>\n  let fonts = [\"Roboto\", \"Syne Tactile\", \"Syne Mono\", \"Open Sans\", \"Trispace\", \"Noto Sans JP\", \"Lato\", \"Montserrat\", \"Turret Road\", \"Source Sans Pro\", \"Roboto Condensed\", \"Oswald\", \"Grandstander\", \"Roboto Mono\", \"Poppins\", \"Raleway\", \"Noto Sans\", \"Grenze Gotisch\", \"PT Sans\", \"Roboto Slab\", \"Merriweather\", \"Ubuntu\", \"Playfair Display\", \"Nunito\", \"Staatliches\", \"Open Sans Condensed\", \"Lora\", \"PT Serif\", \"Work Sans\", \"Noto Serif\", \"Rubik\", \"Henny Penny\", \"Fira Sans\", \"Noto Sans KR\", \"Hind Siliguri\", \"Mukta\", \"Titillium Web\", \"Nunito Sans\", \"Quicksand\", \"Nanum Gothic\"];\n  let font;\n\n  function chooseRandomFont() {\n    font = fonts[Math.floor(Math.random() * fonts.length)];\n  }\n\n  chooseRandomFont();\n\n  function changeFont() {\n    chooseRandomFont();\n  }\n</script>\n\n<link href=\"https://fonts.googleapis.com/css2?family={font}&display=swap\" rel=\"stylesheet\">\n\n<style>\ndiv.card {\n  height: 400px;\n  width: 250px;\n  border: 1px solid black;\n  border-radius: 3%;\n  margin: 0 auto;\n  font-size: 200%;\n  font-family: var(--card-font);\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n}\n\nbutton {\n    height: 50px;\n    width: 100px;\n    border: none;\n    margin: 0 auto;\n}\n\n.button-row {\n  margin-bottom: 10px;\n}\n\n.yes {\n    background-color: #8db596;\n}\n\n.no {\n    background-color: #ee6f57;\n}\n\n</style>\n\n<div class=\"card\" style=\"--card-font: '{font}'\">\n\n  <p>Almost before we knew it, we had left the ground.</p>\n\n  <div class=\"button-row\">\n    <button class=\"no\" on:click={changeFont}>  \n      NO!\n    </button>\n\n    <button class=\"yes\" on:click={changeFont}>  \n      YES!\n    </button>\n  </div>\n</div>\n\n"
+  ],
+  "names": [],
+  "mappings": "AAKA,MAAM,cAAC,CAAC,AACN,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,MAAM,AACpB,CAAC;ACUD,GAAG,KAAK,cAAC,CAAC,AACR,MAAM,CAAE,KAAK,CACb,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,KAAK,CACvB,aAAa,CAAE,EAAE,CACjB,MAAM,CAAE,CAAC,CAAC,IAAI,CACd,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,IAAI,WAAW,CAAC,CAC7B,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,aAAa,CAC9B,WAAW,CAAE,MAAM,AACrB,CAAC,AAED,MAAM,cAAC,CAAC,AACJ,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,CAAC,CAAC,IAAI,AAClB,CAAC,AAED,WAAW,cAAC,CAAC,AACX,aAAa,CAAE,IAAI,AACrB,CAAC,AAED,IAAI,cAAC,CAAC,AACF,gBAAgB,CAAE,OAAO,AAC7B,CAAC,AAED,GAAG,cAAC,CAAC,AACD,gBAAgB,CAAE,OAAO,AAC7B,CAAC"
+}
