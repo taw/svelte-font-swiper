@@ -1,6 +1,6 @@
-# svelte-boilerplate
+# svelte-font-swiper
 
-Boilerplate for Svelte with Github Pages.
+Swipe Fonts you like or don't like.
 
 ## Install dependencies
 
