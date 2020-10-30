@@ -2,6 +2,8 @@
 
 Swipe Fonts you like or don't like.
 
+[Available here](https://taw.github.io/svelte-font-swiper/).
+
 ## Install dependencies
 
 ```
