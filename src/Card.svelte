@@ -1,5 +1,5 @@
 <script>
-  let fonts = ["Roboto", "Syne Tactile", "Syne Mono", "Open Sans", "Trispace", "Noto Sans JP", "Lato", "Montserrat", "Turret Road", "Source Sans Pro", "Roboto Condensed", "Oswald", "Grandstander", "Roboto Mono", "Poppins", "Raleway", "Noto Sans", "Grenze Gotisch", "PT Sans", "Roboto Slab", "Merriweather", "Ubuntu", "Playfair Display", "Nunito", "Staatliches", "Open Sans Condensed", "Lora", "PT Serif", "Work Sans", "Noto Serif", "Rubik", "Henny Penny", "Fira Sans", "Noto Sans KR", "Hind Siliguri", "Mukta", "Titillium Web", "Nunito Sans", "Quicksand", "Nanum Gothic"];
+  import fonts from "./fontlist.js";
   let font;
 
   function chooseRandomFont() {
@@ -8,7 +8,13 @@
 
   chooseRandomFont();
 
-  function changeFont() {
+  function swipeNo() {
+    console.log("You swiped no:", font)
+    chooseRandomFont();
+  }
+
+  function swipeYes() {
+    console.log("You swiped yes:", font)
     chooseRandomFont();
   }
 </script>
@@ -17,12 +23,12 @@
 
 <style>
 div.card {
-  height: 400px;
-  width: 250px;
+  height: 600px;
+  width: 350px;
   border: 1px solid black;
   border-radius: 3%;
   margin: 0 auto;
-  font-size: 200%;
+  font-size: 250%;
   font-family: var(--card-font);
   display: flex;
   flex-direction: column;
@@ -35,6 +41,15 @@ button {
     width: 100px;
     border: none;
     margin: 0 auto;
+}
+
+p {
+  padding: 5px;
+}
+
+h6 {
+  padding: 0;
+  margin: 0;
 }
 
 .button-row {
@@ -52,17 +67,16 @@ button {
 </style>
 
 <div class="card" style="--card-font: '{font}'">
-
+  <h6>{font}</h6>
   <p>Almost before we knew it, we had left the ground.</p>
 
   <div class="button-row">
-    <button class="no" on:click={changeFont}>  
+    <button class="no" on:click={swipeNo}>
       NO!
     </button>
 
-    <button class="yes" on:click={changeFont}>  
+    <button class="yes" on:click={swipeYes}>
       YES!
     </button>
   </div>
 </div>
-
